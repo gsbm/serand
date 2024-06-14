@@ -6,15 +6,15 @@
 **Note** : Python 3.6 or higher is required.
 
 ```bash
-# clone the repository
+# Clone the repository
 $ git clone https://github.com/greenmagenta/secure_random.git
 
-# change the working directory to watson
+# Change the working directory to watson
 $ cd secure_random
 
-# install python3 and python3-pip if they are not installed
+# Install python3 and python3-pip if they are not installed
 
-# install the library
+# Install the library
 $ python3 setup.py install
 ```
 
