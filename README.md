@@ -33,99 +33,80 @@ random.seed()
 ```
 ```py
 # Generate 16 random bytes
-# This can be used for cryptographic purposes or to generate unique tokens
 print("Random Bytes:", random.randbytes(16))
 ```
 ```py
 # Generate a random 32-bit integer
-# This function generates a random integer with 32 random bits
 print("Random Integer:", random.getrandbits(32))
 ```
 ```py
 # Generate a random integer within a specific range [10, 100]
-# This is useful for generating random numbers within a specified range
 print("Random Integer in Range [10, 100]:", random.randint(10, 100))
 ```
 ```py
 # Choose a random element from a list
-# This can be used for randomly selecting an item from a list
 print("Random Choice from [1, 2, 3, 4, 5]:", random.choice([1, 2, 3, 4, 5]))
 ```
 ```py
 # Shuffle a list in place
-# This randomly shuffles the elements of the list
 sample_list = [1, 2, 3, 4, 5]
 random.shuffle(sample_list)
 print("Shuffled List:", sample_list)
 ```
 ```py
 # Generate a random sample of 3 unique elements from a list
-# This selects 3 unique elements from the list without replacement
 print("Sample from [1, 2, 3, 4, 5]:", random.sample([1, 2, 3, 4, 5], 3))
 ```
 ```py
 # Generate a binomial variate
-# This simulates the number of successes in 10 trials with a success probability of 0.5
 print("Binomial Variate:", random.binomialvariate(10, 0.5))
 ```
 ```py
 # Generate a random floating-point number in the range [0.0, 1.0)
-# This is useful for generating a random probability or proportion
 print("Random Float:", random.random())
 ```
 ```py
 # Generate a random floating-point number in the range [0, 10]
-# This generates a random number within the specified range
 print("Uniform [0, 10]:", random.uniform(0, 10))
 ```
 ```py
 # Generate a random number with a triangular distribution
-# The distribution ranges from 0 to 10 with a mode of 5
 print("Triangular [0, 10, 5]:", random.triangular(0, 10, 5))
 ```
 ```py
 # Generate a random number with a beta distribution
-# The distribution is defined by alpha=2 and beta=5
 print("Beta variate [2, 5]:", random.betavariate(2, 5))
 ```
 ```py
 # Generate a random number with an exponential distribution
-# The distribution is defined by a lambda parameter of 1.5
 print("Exponential variate [1.5]:", random.expovariate(1.5))
 ```
 ```py
 # Generate a random number with a gamma distribution
-# The distribution is defined by alpha=2 and beta=3
 print("Gamma variate [2, 3]:", random.gammavariate(2, 3))
 ```
 ```py
 # Generate a random number with a Gaussian (normal) distribution
-# The distribution is defined by a mean (mu) of 0 and a standard deviation (sigma) of 1
 print("Gaussian [0, 1]:", random.gauss(0, 1))
 ```
 ```py
 # Generate a random number with a log-normal distribution
-# The distribution is defined by a mean (mu) of 0 and a standard deviation (sigma) of 1
 print("Log normal [0, 1]:", random.lognormvariate(0, 1))
 ```
 ```py
 # Generate a random number with a normal distribution
-# The distribution is defined by a mean (mu) of 0 and a standard deviation (sigma) of 1
 print("Normal variate [0, 1]:", random.normalvariate(0, 1))
 ```
 ```py
 # Generate a random number with a von Mises distribution
-# The distribution is defined by a mean angle (mu) of 0 and a concentration parameter (kappa) of 4
 print("Von Mises [0, 4]:", random.vonmisesvariate(0, 4))
 ```
 ```py
 # Generate a random number with a Pareto distribution
-# The distribution is defined by a shape parameter (alpha) of 2
 print("Pareto [2]:", random.paretovariate(2))
 ```
 ```py
 # Generate a random number with a Weibull distribution
-# The distribution is defined by a scale parameter (alpha) of 1 and a shape parameter (beta) of 1.5
 print("Weibull [1, 1.5]:", random.weibullvariate(1, 1.5))
 ```
 
