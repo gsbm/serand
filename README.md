@@ -1,4 +1,4 @@
-# secure_random
+# serand
 🔄 All-in-one library to generate cryptographically secure random numbers
 
 ## Get started
@@ -7,10 +7,10 @@
 
 ```bash
 # Clone the repository
-$ git clone https://github.com/greenmagenta/secure_random.git
+$ git clone https://github.com/greenmagenta/serand.git
 
 # Change the working directory to watson
-$ cd secure_random
+$ cd serand
 
 # Install python3 and python3-pip if they are not installed
 
@@ -22,7 +22,7 @@ $ python3 setup.py install
 
 ```py
 # Import the SecureRandom library
-from secure_random import SecureRandom
+from serand import SecureRandom
 
 # Create an instance of SecureRandom
 random = SecureRandom()
@@ -327,7 +327,7 @@ print("Weibull [1, 1.5]:", random.weibullvariate(1, 1.5))
 
 ## Disclamer
 
-This library, `secure_random`, is experimental and has been developed as an educational tool to demonstrate cryptographically secure random number generation techniques. While it uses the secrets module and system entropy sources to enhance security, it is important to note that the library has not undergone extensive security audits or formal verification.
+This library, `serand`, is experimental and has been developed as an educational tool to demonstrate cryptographically secure random number generation techniques. While it uses the secrets module and system entropy sources to enhance security, it is important to note that the library has not undergone extensive security audits or formal verification.
 
 If you intend to use secure_random in sensitive or critical applications, we strongly recommend conducting a thorough security review and validation to ensure it meets your specific security requirements. Users should exercise caution and perform their own due diligence before relying on this library for any sensitive use cases.
 
