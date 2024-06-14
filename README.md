@@ -348,7 +348,7 @@ print("Weibull [1, 1.5]:", random.weibullvariate(1, 1.5))
 
 This library, `serand`, is experimental and has been developed as an educational tool to demonstrate cryptographically secure random number generation techniques. While it uses the secrets module and system entropy sources to enhance security, it is important to note that the library has not undergone extensive security audits or formal verification.
 
-If you intend to use secure_random in sensitive or critical applications, we strongly recommend conducting a thorough security review and validation to ensure it meets your specific security requirements. Users should exercise caution and perform their own due diligence before relying on this library for any sensitive use cases.
+If you intend to use `serand` in sensitive or critical applications, we strongly recommend conducting a thorough security review and validation to ensure it meets your specific security requirements. Users should exercise caution and perform their own due diligence before relying on this library for any sensitive use cases.
 
 ## License
 
