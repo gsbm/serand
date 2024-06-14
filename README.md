@@ -21,7 +21,7 @@ $ python setup.py install
 ### Usage
 
 ```py
-# Import the SecureRandom library
+# Import the library
 from serand import SecureRandom
 
 # Create an instance of SecureRandom
