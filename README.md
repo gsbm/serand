@@ -9,7 +9,7 @@
 # Clone the repository
 $ git clone https://github.com/greenmagenta/serand.git
 
-# Change the working directory to watson
+# Change the working directory to serand
 $ cd serand
 
 # Install python and python-pip if they are not installed
