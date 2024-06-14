@@ -12,10 +12,10 @@ $ git clone https://github.com/greenmagenta/serand.git
 # Change the working directory to watson
 $ cd serand
 
-# Install python3 and python3-pip if they are not installed
+# Install python and python-pip if they are not installed
 
 # Install the library
-$ python3 setup.py install
+$ python setup.py install
 ```
 
 ### Usage
@@ -127,6 +127,13 @@ print("Pareto [2]:", random.paretovariate(2))
 # Generate a random number with a Weibull distribution
 # The distribution is defined by a scale parameter (alpha) of 1 and a shape parameter (beta) of 1.5
 print("Weibull [1, 1.5]:", random.weibullvariate(1, 1.5))
+```
+
+### Unit Tests
+
+```bash
+# Run unit tests to check all functions
+python -m unittest test_serand.py
 ```
 
 ## Documentation
