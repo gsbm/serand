@@ -1,5 +1,5 @@
 # secure_random
-🗝️ All-in-one library to generate cryptographically secure random numbers
+🔄 All-in-one library to generate cryptographically secure random numbers
 
 ## Get started
 
