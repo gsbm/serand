@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='secure_random',
+    name='serand',
     version='1.0.0',
     description='All-in-one library to generate cryptographically secure random numbers.',
     author='Greenmagenta',
-    url='https://github.com/greenmagenta/secure_random',  # Remplacez par l'URL de votre projet si applicable
+    url='https://github.com/greenmagenta/serand',  # Remplacez par l'URL de votre projet si applicable
     packages=find_packages(),
     install_requires=[],
     classifiers=[
