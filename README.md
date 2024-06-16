@@ -3,6 +3,8 @@
 
 ## Get started
 
+### Installation
+
 **Note** : Python 3.6 or higher is required.
 
 ```bash
