@@ -9,7 +9,7 @@
 
 ```bash
 # Clone the repository
-$ git clone https://github.com/greenmagenta/serand.git
+$ git clone https://github.com/gsbm/serand.git
 
 # Change the working directory to serand
 $ cd serand
