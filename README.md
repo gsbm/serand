@@ -32,85 +32,26 @@ random = SecureRandom()
 # Initialize the seed for the random number generator
 # This step ensures that the random number generator starts with a unique state
 random.seed()
-```
-```py
-# Generate 16 random bytes
-print("Random Bytes:", random.randbytes(16))
-```
-```py
-# Generate a random 32-bit integer
-print("Random Integer:", random.getrandbits(32))
-```
-```py
+
 # Generate a random integer within a specific range [10, 100]
-print("Random Integer in Range [10, 100]:", random.randint(10, 100))
+value = random.randint(10, 100)
+print("Random Integer in Range [10, 100]:", value)
 ```
-```py
-# Choose a random element from a list
-print("Random Choice from [1, 2, 3, 4, 5]:", random.choice([1, 2, 3, 4, 5]))
-```
-```py
-# Shuffle a list in place
-sample_list = [1, 2, 3, 4, 5]
-random.shuffle(sample_list)
-print("Shuffled List:", sample_list)
-```
-```py
-# Generate a random sample of 3 unique elements from a list
-print("Sample from [1, 2, 3, 4, 5]:", random.sample([1, 2, 3, 4, 5], 3))
-```
-```py
-# Generate a binomial variate
-print("Binomial Variate:", random.binomialvariate(10, 0.5))
-```
-```py
-# Generate a random floating-point number in the range [0.0, 1.0)
-print("Random Float:", random.random())
-```
-```py
-# Generate a random floating-point number in the range [0, 10]
-print("Uniform [0, 10]:", random.uniform(0, 10))
-```
-```py
-# Generate a random number with a triangular distribution
-print("Triangular [0, 10, 5]:", random.triangular(0, 10, 5))
-```
-```py
-# Generate a random number with a beta distribution
-print("Beta variate [2, 5]:", random.betavariate(2, 5))
-```
-```py
-# Generate a random number with an exponential distribution
-print("Exponential variate [1.5]:", random.expovariate(1.5))
-```
-```py
-# Generate a random number with a gamma distribution
-print("Gamma variate [2, 3]:", random.gammavariate(2, 3))
-```
-```py
-# Generate a random number with a Gaussian (normal) distribution
-print("Gaussian [0, 1]:", random.gauss(0, 1))
-```
-```py
-# Generate a random number with a log-normal distribution
-print("Log normal [0, 1]:", random.lognormvariate(0, 1))
-```
-```py
-# Generate a random number with a normal distribution
-print("Normal variate [0, 1]:", random.normalvariate(0, 1))
-```
-```py
-# Generate a random number with a von Mises distribution
-print("Von Mises [0, 4]:", random.vonmisesvariate(0, 4))
-```
-```py
-# Generate a random number with a Pareto distribution
-print("Pareto [2]:", random.paretovariate(2))
-```
-```py
-# Generate a random number with a Weibull distribution
-print("Weibull [1, 1.5]:", random.weibullvariate(1, 1.5))
-```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Unit Tests
 
@@ -155,7 +96,10 @@ python -m unittest test_serand.py
         n (int): Number of bytes to generate.
     Returns:
         bytes: Random bytes.
-
+```py
+# Generate 16 random bytes
+print("Random Bytes:", random.randbytes(16))
+```
 ### Random Integers
 
 `randrange(start, stop=None, step=1)`
@@ -167,7 +111,13 @@ python -m unittest test_serand.py
         step (int): Step size.
     Returns:
         int: Random element from the range.
+```py
+# Generate a random element from range(10)
+print("Random Element from range(10):", SecureRandom.randrange(10))
 
+# Generate a random element from range(10, 20, 2)
+print("Random Element from range(10, 20, 2):", SecureRandom.randrange(10, 20, 2))
+```
 `randint(a, b)`
 
     Returns a random integer N such that a <= N <= b.
@@ -176,7 +126,10 @@ python -m unittest test_serand.py
         b (int): Upper bound.
     Returns:
         int: Random integer.
-
+```py
+# Generate a random integer within a specific range [10, 100]
+print("Random Integer in Range [10, 100]:", random.randint(10, 100))
+```
 `getrandbits(k)`
 
     Returns a random integer with k random bits.
@@ -184,6 +137,10 @@ python -m unittest test_serand.py
         k (int): Number of random bits.
     Returns:
         int: Random integer.
+```py
+# Generate a random 32-bit integer
+print("Random Integer:", random.getrandbits(32))
+```
 
 ### Random Sequences
 
@@ -196,7 +153,10 @@ python -m unittest test_serand.py
         Random element from the sequence.
     Raises:
         IndexError: If the sequence is empty.
-
+```py
+# Choose a random element from a list
+print("Random Choice from [1, 2, 3, 4, 5]:", random.choice([1, 2, 3, 4, 5]))
+```
 `choices(population, weights=None, cum_weights=None, k=1)`
 
     Returns a list of size k of elements chosen from the population with replacement.
@@ -209,13 +169,21 @@ python -m unittest test_serand.py
         List of chosen elements.
     Raises:
         TypeError: If both weights and cum_weights are specified.
-
+```py
+# Choose 3 elements from a list with weights
+print("Choices from ['a', 'b', 'c'] with weights [0.1, 0.3, 0.6]:", SecureRandom.choices(['a', 'b', 'c'], weights=[0.1, 0.3, 0.6], k=3))
+```
 `shuffle(x)`
 
     Shuffles the sequence x in place.
     Parameters:
         x (List): List to shuffle.
-
+```py
+# Shuffle a list in place
+sample_list = [1, 2, 3, 4, 5]
+random.shuffle(sample_list)
+print("Shuffled List:", sample_list)
+```
 `sample(population, k, counts=None)`
 
     Returns a list of size k of unique elements chosen from the population.
@@ -227,6 +195,10 @@ python -m unittest test_serand.py
         List of unique elements.
     Raises:
         ValueError: If sample size k is larger than the population size.
+```py
+# Generate a random sample of 3 unique elements from a list
+print("Sample from [1, 2, 3, 4, 5]:", random.sample([1, 2, 3, 4, 5], 3))
+```
 
 ### Distributions for Real Numbers
 
@@ -235,7 +207,10 @@ python -m unittest test_serand.py
     Returns a random floating-point number in the range [0.0, 1.0).
     Returns:
         float: Random floating-point number.
-
+```py
+# Generate a random floating-point number in the range [0.0, 1.0)
+print("Random Float:", random.random())
+```
 `uniform(a, b)`
 
     Returns a random floating-point number N such that a <= N <= b.
@@ -244,7 +219,10 @@ python -m unittest test_serand.py
         b (float): Upper bound.
     Returns:
         float: Random floating-point number.
-
+```py
+# Generate a random floating-point number in the range [0, 10]
+print("Uniform [0, 10]:", random.uniform(0, 10))
+```
 `triangular(low, high, mode)`
 
     Returns a random floating-point number N such that low <= N <= high with the specified mode between those bounds.
@@ -254,7 +232,10 @@ python -m unittest test_serand.py
         mode (float): Mode of the distribution.
     Returns:
         float: Random floating-point number.
-
+```py
+# Generate a random number with a triangular distribution
+print("Triangular [0, 10, 5]:", random.triangular(0, 10, 5))
+```
 `betavariate(alpha, beta)`
 
     Beta distribution. Returns a random number between 0 and 1.
@@ -263,7 +244,10 @@ python -m unittest test_serand.py
         beta (float): Beta parameter.
     Returns:
         float: Random number.
-
+```py
+# Generate a random number with a beta distribution
+print("Beta variate [2, 5]:", random.betavariate(2, 5))
+```
 `expovariate(lambd)`
 
     Exponential distribution. Returns a random number.
@@ -271,7 +255,10 @@ python -m unittest test_serand.py
         lambd (float): 1.0 divided by the desired mean.
     Returns:
         float: Random number.
-
+```py
+# Generate a random number with an exponential distribution
+print("Exponential variate [1.5]:", random.expovariate(1.5))
+```
 `gammavariate(alpha, beta)`
 
     Gamma distribution. Returns a random number.
@@ -280,7 +267,10 @@ python -m unittest test_serand.py
         beta (float): Scale parameter.
     Returns:
         float: Random number.
-
+```py
+# Generate a random number with a gamma distribution
+print("Gamma variate [2, 3]:", random.gammavariate(2, 3))
+```
 `gauss(mu, sigma)`
 
     Gaussian distribution. Returns a random number.
@@ -289,7 +279,10 @@ python -m unittest test_serand.py
         sigma (float): Standard deviation.
     Returns:
         float: Random number.
-
+```py
+# Generate a random number with a Gaussian (normal) distribution
+print("Gaussian [0, 1]:", random.gauss(0, 1))
+```
 `lognormvariate(mu, sigma)`
 
     Log-normal distribution. Returns a random number.
@@ -298,7 +291,10 @@ python -m unittest test_serand.py
         sigma (float): Standard deviation of the underlying normal distribution.
     Returns:
         float: Random number.
-
+```py
+# Generate a random number with a log-normal distribution
+print("Log normal [0, 1]:", random.lognormvariate(0, 1))
+```
 `normalvariate(mu, sigma)`
 
     Normal distribution. Returns a random number.
@@ -307,7 +303,10 @@ python -m unittest test_serand.py
         sigma (float): Standard deviation.
     Returns:
         float: Random number.
-
+```py
+# Generate a random number with a normal distribution
+print("Normal variate [0, 1]:", random.normalvariate(0, 1))
+```
 `vonmisesvariate(mu, kappa)`
 
     Von Mises distribution. Returns a random number.
@@ -316,7 +315,10 @@ python -m unittest test_serand.py
         kappa (float): Concentration parameter.
     Returns:
         float: Random number.
-
+```py
+# Generate a random number with a von Mises distribution
+print("Von Mises [0, 4]:", random.vonmisesvariate(0, 4))
+```
 `paretovariate(alpha)`
 
     Pareto distribution. Returns a random number.
@@ -324,7 +326,10 @@ python -m unittest test_serand.py
         alpha (float): Shape parameter.
     Returns:
         float: Random number.
-
+```py
+# Generate a random number with a Pareto distribution
+print("Pareto [2]:", random.paretovariate(2))
+```
 `weibullvariate(alpha, beta)`
 
     Weibull distribution. Returns a random number.
@@ -333,6 +338,22 @@ python -m unittest test_serand.py
         beta (float): Shape parameter.
     Returns:
         float: Random number.
+```py
+# Generate a random number with a Weibull distribution
+print("Weibull [1, 1.5]:", random.weibullvariate(1, 1.5))
+```
+`binomialvariate(n, p)`
+
+    Binomial distribution. Returns a random integer.
+    Parameters:
+        n (int): Number of trials.
+        p (float): Probability of success for each trial.
+    Returns:
+        int: Number of successes in n trials.
+```py
+# Generate a random number with a binomial distribution
+print("Binomial variate [10, 0.5]:", SecureRandom.binomialvariate(10, 0.5))
+```
 
 ## Disclamer
 
