@@ -4,8 +4,8 @@ setup(
     name='serand',
     version='1.0.0',
     description='All-in-one library to generate cryptographically secure random numbers.',
-    author='Greenmagenta',
-    url='https://github.com/greenmagenta/serand',  # Remplacez par l'URL de votre projet si applicable
+    author='gsbm',
+    url='https://github.com/gsbm/serand',  # Remplacez par l'URL de votre projet si applicable
     packages=find_packages(),
     install_requires=[],
     classifiers=[
