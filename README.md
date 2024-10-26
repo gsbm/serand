@@ -98,7 +98,7 @@ $ python -m unittest test_serand.py
         bytes: Random bytes.
 ```py
 # Generate 16 random bytes
-print("Random Bytes:", random.randbytes(16))
+print("Random Bytes:", SecureRandom.randbytes(16))
 ```
 ### Random Integers
 
@@ -128,7 +128,7 @@ print("Random Element from range(10, 20, 2):", SecureRandom.randrange(10, 20, 2)
         int: Random integer.
 ```py
 # Generate a random integer within a specific range [10, 100]
-print("Random Integer in Range [10, 100]:", random.randint(10, 100))
+print("Random Integer in Range [10, 100]:", SecureRandom.randint(10, 100))
 ```
 `getrandbits(k)`
 
@@ -139,7 +139,7 @@ print("Random Integer in Range [10, 100]:", random.randint(10, 100))
         int: Random integer.
 ```py
 # Generate a random 32-bit integer
-print("Random Integer:", random.getrandbits(32))
+print("Random Integer:", SecureRandom.getrandbits(32))
 ```
 
 ### Random Sequences
@@ -155,7 +155,7 @@ print("Random Integer:", random.getrandbits(32))
         IndexError: If the sequence is empty.
 ```py
 # Choose a random element from a list
-print("Random Choice from [1, 2, 3, 4, 5]:", random.choice([1, 2, 3, 4, 5]))
+print("Random Choice from [1, 2, 3, 4, 5]:", SecureRandom.choice([1, 2, 3, 4, 5]))
 ```
 `choices(population, weights=None, cum_weights=None, k=1)`
 
@@ -181,7 +181,7 @@ print("Choices from ['a', 'b', 'c'] with weights [0.1, 0.3, 0.6]:", SecureRandom
 ```py
 # Shuffle a list in place
 sample_list = [1, 2, 3, 4, 5]
-random.shuffle(sample_list)
+SecureRandom.shuffle(sample_list)
 print("Shuffled List:", sample_list)
 ```
 `sample(population, k, counts=None)`
@@ -197,7 +197,7 @@ print("Shuffled List:", sample_list)
         ValueError: If sample size k is larger than the population size.
 ```py
 # Generate a random sample of 3 unique elements from a list
-print("Sample from [1, 2, 3, 4, 5]:", random.sample([1, 2, 3, 4, 5], 3))
+print("Sample from [1, 2, 3, 4, 5]:", SecureRandom.sample([1, 2, 3, 4, 5], 3))
 ```
 
 ### Distributions for Real Numbers
@@ -209,7 +209,7 @@ print("Sample from [1, 2, 3, 4, 5]:", random.sample([1, 2, 3, 4, 5], 3))
         float: Random floating-point number.
 ```py
 # Generate a random floating-point number in the range [0.0, 1.0)
-print("Random Float:", random.random())
+print("Random Float:", SecureRandom.random())
 ```
 `uniform(a, b)`
 
@@ -221,7 +221,7 @@ print("Random Float:", random.random())
         float: Random floating-point number.
 ```py
 # Generate a random floating-point number in the range [0, 10]
-print("Uniform [0, 10]:", random.uniform(0, 10))
+print("Uniform [0, 10]:", SecureRandom.uniform(0, 10))
 ```
 `triangular(low, high, mode)`
 
@@ -234,7 +234,7 @@ print("Uniform [0, 10]:", random.uniform(0, 10))
         float: Random floating-point number.
 ```py
 # Generate a random number with a triangular distribution
-print("Triangular [0, 10, 5]:", random.triangular(0, 10, 5))
+print("Triangular [0, 10, 5]:", SecureRandom.triangular(0, 10, 5))
 ```
 `betavariate(alpha, beta)`
 
@@ -246,7 +246,7 @@ print("Triangular [0, 10, 5]:", random.triangular(0, 10, 5))
         float: Random number.
 ```py
 # Generate a random number with a beta distribution
-print("Beta variate [2, 5]:", random.betavariate(2, 5))
+print("Beta variate [2, 5]:", SecureRandom.betavariate(2, 5))
 ```
 `expovariate(lambd)`
 
@@ -257,7 +257,7 @@ print("Beta variate [2, 5]:", random.betavariate(2, 5))
         float: Random number.
 ```py
 # Generate a random number with an exponential distribution
-print("Exponential variate [1.5]:", random.expovariate(1.5))
+print("Exponential variate [1.5]:", SecureRandom.expovariate(1.5))
 ```
 `gammavariate(alpha, beta)`
 
@@ -269,7 +269,7 @@ print("Exponential variate [1.5]:", random.expovariate(1.5))
         float: Random number.
 ```py
 # Generate a random number with a gamma distribution
-print("Gamma variate [2, 3]:", random.gammavariate(2, 3))
+print("Gamma variate [2, 3]:", SecureRandom.gammavariate(2, 3))
 ```
 `gauss(mu, sigma)`
 
@@ -281,7 +281,7 @@ print("Gamma variate [2, 3]:", random.gammavariate(2, 3))
         float: Random number.
 ```py
 # Generate a random number with a Gaussian (normal) distribution
-print("Gaussian [0, 1]:", random.gauss(0, 1))
+print("Gaussian [0, 1]:", SecureRandom.gauss(0, 1))
 ```
 `lognormvariate(mu, sigma)`
 
@@ -293,7 +293,7 @@ print("Gaussian [0, 1]:", random.gauss(0, 1))
         float: Random number.
 ```py
 # Generate a random number with a log-normal distribution
-print("Log normal [0, 1]:", random.lognormvariate(0, 1))
+print("Log normal [0, 1]:", SecureRandom.lognormvariate(0, 1))
 ```
 `normalvariate(mu, sigma)`
 
@@ -305,7 +305,7 @@ print("Log normal [0, 1]:", random.lognormvariate(0, 1))
         float: Random number.
 ```py
 # Generate a random number with a normal distribution
-print("Normal variate [0, 1]:", random.normalvariate(0, 1))
+print("Normal variate [0, 1]:", SecureRandom.normalvariate(0, 1))
 ```
 `vonmisesvariate(mu, kappa)`
 
@@ -317,7 +317,7 @@ print("Normal variate [0, 1]:", random.normalvariate(0, 1))
         float: Random number.
 ```py
 # Generate a random number with a von Mises distribution
-print("Von Mises [0, 4]:", random.vonmisesvariate(0, 4))
+print("Von Mises [0, 4]:", SecureRandom.vonmisesvariate(0, 4))
 ```
 `paretovariate(alpha)`
 
@@ -328,7 +328,7 @@ print("Von Mises [0, 4]:", random.vonmisesvariate(0, 4))
         float: Random number.
 ```py
 # Generate a random number with a Pareto distribution
-print("Pareto [2]:", random.paretovariate(2))
+print("Pareto [2]:", SecureRandom.paretovariate(2))
 ```
 `weibullvariate(alpha, beta)`
 
@@ -340,7 +340,7 @@ print("Pareto [2]:", random.paretovariate(2))
         float: Random number.
 ```py
 # Generate a random number with a Weibull distribution
-print("Weibull [1, 1.5]:", random.weibullvariate(1, 1.5))
+print("Weibull [1, 1.5]:", SecureRandom.weibullvariate(1, 1.5))
 ```
 `binomialvariate(n, p)`
 
