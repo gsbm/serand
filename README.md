@@ -57,7 +57,7 @@ print("Random Integer in Range [10, 100]:", value)
 
 ```bash
 # Run unit tests to check all functions
-python -m unittest test_serand.py
+$ python -m unittest test_serand.py
 ```
 
 ## Documentation
